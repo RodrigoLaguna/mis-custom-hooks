@@ -1,5 +1,18 @@
 import { useState } from "react"
 
+/**============================================
+ **               FORM HOOK
+    Este custom hook toma todos los valores
+    captados por un formulario.
+
+  @return [
+      values: Valores
+      handleInputChange: Funcion para cambiar el estado
+      reset: Funcion para limpiar formulario
+    ]
+ *=============================================**/
+
+
 export const useForm = ( initialState = {} ) => {
 
   const [values, setValues] = useState(initialState);
