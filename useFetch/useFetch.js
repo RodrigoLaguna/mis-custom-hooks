@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react"
 
 export const useFetch = ( url ) => {
 
-  const [state, setstate] = useState({ data:null, loading:true, error:null } );
   const isMounted = useRef(true);
+  const [state, setstate] = useState({ data:null, loading:true, error:null } );
 
   useEffect(() => {
     return () => {
@@ -16,12 +16,7 @@ export const useFetch = ( url ) => {
   useEffect(() => {
 
     // Estado para cuando se hace una nueva peticion
-    setstate({
-      data:null,
-      loading:true,
-      error:null
-    });
-
+    setstate( { data:null,loading:true,error:null } );
 
     fetch( url )
       .then( resp => resp.json() )
